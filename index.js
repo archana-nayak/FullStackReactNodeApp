@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send({'hi': 'there'});
+  res.send({"hi": "there"});
 });
 
 //process.env.PORT for production where HEROKU will
@@ -12,6 +12,6 @@ app.get('/', (req, res) => {
 //server will run on.
 const PORT = process.env.PORT || 5000;
 
-app.listen(5000, () => {
-  console.log('listening on port 5000');
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
 });
